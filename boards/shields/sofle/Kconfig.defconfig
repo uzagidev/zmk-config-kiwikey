@@ -2,7 +2,7 @@ if SHIELD_SOFLE_LEFT
 
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
-    default "KiwiSofle"
+    default "Sofle_OLED"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
