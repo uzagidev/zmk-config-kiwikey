@@ -30,3 +30,4 @@ include:
     
   # - board: nice_nano_v2
     # shield: settings_reset
+    # artifact-name: zmk_settings_reset
