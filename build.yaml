@@ -21,8 +21,6 @@ include:
   - board: nice_nano_v2 # DONGLE
     shield: sofle_dongle
     artifact-name: sofle_oled_dongle
-    snippet: studio-rpc-usb-uart
-    cmake-args:  -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DCONFIG_ZMK_SPLIT=y   -DCONFIG_ZMK_STUDIO=y
 
   # - board: nice_nano_v2 # LEFT PERIPHERAL
     # shield: sofle_left_peripheral
