@@ -7,7 +7,7 @@
 
 / {
     chosen {
-        // zephyr,display = &oled;
+        zephyr,display = &oled;
         zmk,kscan = &mock_kscan;
         zmk,physical-layout = &josefadamcik_sofle_layout;
     };
