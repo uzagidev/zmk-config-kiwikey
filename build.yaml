@@ -10,10 +10,10 @@
 ---
 include:
 
-  # - board: nice_nano_v2 # LEFT MASTER
-    # shield: sofle_left
-    # artifact-name: sofle_oled_left
-    # snippet: studio-rpc-usb-uart
+  - board: nice_nano_v2 # LEFT MASTER
+    shield: sofle_left
+    artifact-name: sofle_oled_left
+    snippet: studio-rpc-usb-uart
   - board: nice_nano_v2 # RIGHT
     shield: sofle_right
     artifact-name: sofle_oled_right
