@@ -50,18 +50,18 @@
         raise_layer {
             display-name = "RAISE";
             // ------------------------------------------------------------------------------------------------------------
-            // |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
-            // |     | INS  | PSCR | GUI   |       |      |                | PGUP |      |       |      |       |       |
-            // |     | ALT  | CTRL | SHIFT |       | CAPS |                |  <-  |   v  |   ^   |  ->  |  DEL  | BKSPC |
-            // |     | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
-            //              |      |       |       |      |      |  |      |      |      |       |      |
+            // |     | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                | BTCLR |      |       |      |       |       |
+            // |     | INS  | PSCR | MENU  |       |      |                |       |      |       |      |       |       |
+            // |     |      |      |       |       | CAPS |                |   <-  |   v  |   ^   |  ->  |  DEL  | BKSPC |
+            // |     |      |      |       |       |      |      |  |      |       |      |       |      |       |       |
+            //              |      |       |       |      |      |  |      |       |      |       |      |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans    &trans  &trans     &trans   &trans
-&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &kp PG_UP  &trans    &trans  &trans     &kp N0   &trans
-&trans      &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK                        &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &kp DEL  &kp BSPC
-&trans      &kp K_UNDO    &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &trans     &trans    &trans  &trans     &trans   &trans
-                          &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans    &trans  &trans
+&trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &bt BT_CLR &trans    &trans  &trans     &trans   &trans
+&trans     &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans                          &trans     &trans    &trans  &trans     &trans   &trans
+&trans     &trans        &trans        &trans        &trans        &trans                          &kp LEFT   &kp DOWN  &kp UP  &kp RIGHT  &trans   &trans
+&kp CLCK   &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans    &trans  &trans     &trans   &trans
+                         &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans    &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
