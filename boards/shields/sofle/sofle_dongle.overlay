@@ -7,9 +7,9 @@
 
 / {
     chosen {
-		zephyr,display = &oled;
+        zephyr,display = &oled;
         zmk,kscan = &mock_kscan;
-		zmk,physical-layout = &josefadamcik_sofle_layout;
+        zmk,physical-layout = &josefadamcik_sofle_layout;
     };
 
     default_transform: keymap_transform_0 {
@@ -52,9 +52,9 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         triggers-per-rotation = <20>;
     };
 
-    mock_kscan: mock_kscan_0 {
+    mock_kscan: kscan_0 {
         compatible = "zmk,kscan-mock";
-		// wakeup-source;
+        // wakeup-source;
         columns = <0>;
         rows = <0>;
         events = <0>;
