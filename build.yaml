@@ -9,6 +9,7 @@
 # shield: [ "corne_left", "corne_right" ]
 ---
 include:
+
   - board: nice_nano_v2
     shield: sofle_left
     artifact-name: sofle_oled_left
@@ -16,3 +17,14 @@ include:
   - board: nice_nano_v2
     shield: sofle_right
     artifact-name: sofle_oled_right
+    
+  - board: nice_nano_v2
+    shield: sofle_dongle
+    artifact-name: sofle_oled_dongle
+  - board: nice_nano_v2
+    shield: sofle_left
+    artifact-name: sofle_oled_left_peripheral
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    
+  - board: nice_nano_v2
+    shield: settings_reset
