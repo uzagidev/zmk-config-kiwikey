@@ -1,6 +1,5 @@
 if SHIELD_SOFLE_LEFT || SHIELD_SOFLE_DONGLE
 
-# Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
     default "Sofle_OLED"
 
