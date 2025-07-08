@@ -61,7 +61,6 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
     };
 };
 
-/*
 &pro_micro_i2c {
     status = "okay";
 
@@ -81,4 +80,3 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         prechargep = <0x22>;
     };
 };
-*/
