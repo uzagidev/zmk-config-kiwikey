@@ -1,7 +1,7 @@
 include:
 
   - board: nice_nano_v2 # LEFT MASTER
-    shield: sofle_left
+    shield: sofle_left1
     artifact-name: sofle_oled_left
     snippet: studio-rpc-usb-uart
   - board: nice_nano_v2 # RIGHT
