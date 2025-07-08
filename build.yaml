@@ -8,7 +8,7 @@ include:
     # shield: sofle_right
     # artifact-name: sofle_oled_right
     
-  - board: nice_nano_v2 # DONGLE
+  # - board: nice_nano_v2 # DONGLE
     # shield: sofle_dongle
     # shield: sofle_dongle dongle_display
     # artifact-name: sofle_oled_dongle
