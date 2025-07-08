@@ -1,14 +1,25 @@
 manifest:
+
   defaults:
     revision: v0.2
+
   remotes:
+    # Default ZMK
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+    # dongle_display
+    - name: englmaxi
+      url-base: https://github.com/englmaxi
+
   projects:
+    # Default ZMK
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
+    # dongle_display
+    - name: zmk-dongle-display
+      remote: kiwikey
+      revision: dev_testing01
+
   self:
     path: config
