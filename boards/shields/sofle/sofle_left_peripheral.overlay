@@ -1,4 +1,4 @@
-#include <layouts/josefadamcik/sofle.dtsi>
+#include "sofle.dtsi"
 
 &kscan0 {
     col-gpios
