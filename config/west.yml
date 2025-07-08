@@ -8,8 +8,8 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     # dongle_display
-    - name: englmaxi
-      url-base: https://github.com/englmaxi
+    - name: kiwikey
+      url-base: https://github.com/kiwikey
 
   projects:
     # Default ZMK
