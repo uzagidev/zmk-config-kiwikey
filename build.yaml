@@ -9,7 +9,8 @@ include:
     # artifact-name: sofle_oled_right
     
   - board: nice_nano_v2 # DONGLE
-    shield: sofle_dongle dongle_display
+    shield: sofle_dongle
+    # shield: sofle_dongle dongle_display
     artifact-name: sofle_oled_dongle
     snippet: studio-rpc-usb-uart
 
