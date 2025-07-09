@@ -10,6 +10,8 @@ manifest:
     # dongle_display
     - name: kiwikey
       url-base: https://github.com/kiwikey
+    - name: englmaxi
+      url-base: https://github.com/englmaxi
 
   projects:
     # Default ZMK
@@ -18,8 +20,8 @@ manifest:
       import: app/west.yml
     # dongle_display
     - name: zmk-dongle-display
-      remote: kiwikey
-      revision: dev_testing01
+      remote: englmaxi
+      revision: main
 
   self:
     path: config
