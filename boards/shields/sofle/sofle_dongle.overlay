@@ -8,7 +8,7 @@
 / {
     chosen {
         zephyr,display = &oled;
-        zmk,kscan = &mock_kscan;
+        zmk,kscan = &kscan_gpio;
         zmk,physical-layout = &josefadamcik_sofle_layout;
     };
 
@@ -51,13 +51,15 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5) RC(4,5) RC(4,6) RC(3,6) RC(3,7) 
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <20>;
     };
-
-    mock_kscan: kscan_0 {
-        compatible = "zmk,kscan-mock";
-        // wakeup-source;
-        columns = <0>;
-        rows = <0>;
-        events = <0>;
+	
+	kscan_gpio: kscan_0 {
+		compatible = "zmk,kscan-gpio-direct";
+		wakeup-source;
+		debounce-press-ms = <5>;
+		debounce-release-ms = <5>;
+        input-gpios
+            = <&pro_micro 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            ;
     };
 };
 
