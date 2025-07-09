@@ -17,9 +17,9 @@ manifest:
       remote: zmkfirmware
       import: app/west.yml
     # dongle_display
-    # - name: zmk-dongle-display
-      # remote: kiwikey
-      # revision: dev_testing01
+    - name: zmk-dongle-display
+      remote: kiwikey
+      revision: dev_testing01
 
   self:
     path: config
