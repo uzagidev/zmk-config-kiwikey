@@ -33,8 +33,8 @@ RC(5,0)
 
     kscan0: kscan_composite {
         compatible = "zmk,kscan-composite";
-        rows = <5>;
         columns = <16>;
+		rows = <5>;
 
         // Include the direct GPIO driver...
         direct {
