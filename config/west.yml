@@ -12,6 +12,9 @@ manifest:
       url-base: https://github.com/kiwikey
     - name: englmaxi
       url-base: https://github.com/englmaxi
+    # support nice_oled and nice_epaper
+    - name: mctechnology17
+      url-base: https://github.com/mctechnology17
 
   projects:
     # Default ZMK
@@ -21,6 +24,10 @@ manifest:
     # dongle_display
     - name: zmk-dongle-display
       remote: englmaxi
+      revision: main
+    # support nice_oled and nice_epaper
+    - name: zmk-nice-oled
+      remote: mctechnology17
       revision: main
 
   self:
