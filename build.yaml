@@ -2,13 +2,13 @@ include:
 
 ### SOFLE ###
     ### BASIC OLED ###
-  - board: nice_nano_v2 # LEFT MASTER
-    shield: sofle_left
-    artifact-name: sofle_oled_left
-    snippet: studio-rpc-usb-uart
-  - board: nice_nano_v2 # RIGHT
-    shield: sofle_right
-    artifact-name: sofle_oled_right
+  # - board: nice_nano_v2 # LEFT MASTER
+    # shield: sofle_left
+    # artifact-name: sofle_oled_left
+    # snippet: studio-rpc-usb-uart
+  # - board: nice_nano_v2 # RIGHT
+    # shield: sofle_right
+    # artifact-name: sofle_oled_right
   # - board: nice_nano_v2 # LEFT PERIPHERAL
     # shield: sofle_left_peripheral
     # artifact-name: sofle_oled_left_peripheral
@@ -31,13 +31,13 @@ include:
 
 ### CORNE ###
     ### BASIC OLED ###
-  # - board: nice_nano_v2 # LEFT MASTER
-    # shield: corne_left
-    # artifact-name: corne_oled_left
-    # snippet: studio-rpc-usb-uart
-  # - board: nice_nano_v2 # RIGHT
-    # shield: corne_right
-    # artifact-name: corne_oled_right
+  - board: nice_nano_v2 # LEFT MASTER
+    shield: corne_left
+    artifact-name: corne_oled_left
+    snippet: studio-rpc-usb-uart
+  - board: nice_nano_v2 # RIGHT
+    shield: corne_right
+    artifact-name: corne_oled_right
   # - board: nice_nano_v2 # LEFT PERIPHERAL
     # shield: corne_left_peripheral
     # artifact-name: corne_oled_left_peripheral
