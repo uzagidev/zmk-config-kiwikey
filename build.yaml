@@ -38,9 +38,9 @@ include:
   - board: nice_nano_v2 # RIGHT
     shield: corne_right
     artifact-name: corne_oled_right
-  - board: nice_nano_v2 # LEFT PERIPHERAL
-    shield: corne_left_peripheral
-    artifact-name: corne_oled_left_peripheral
+  # - board: nice_nano_v2 # LEFT PERIPHERAL
+    # shield: corne_left_peripheral
+    # artifact-name: corne_oled_left_peripheral
 
 ### RESET ###
   # - board: nice_nano_v2
