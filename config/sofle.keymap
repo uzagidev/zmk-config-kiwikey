@@ -15,7 +15,7 @@
             // |  TAB  |  Q  |   W  |  E   |  R  |  T   |                  |  Y   |  U  |  I    |  O   |   P   |   {   |
             // |  <-   |  A  |   S  |  D   |  F  |  G   |                  |  H   |  J  |  K    |  L   |   ;   |   }   |
             // |  ->   |  Z  |   X  |  C   |  V  |  B   | MUTE  |  | MUTE  |  N   |  M  |  ,    |  .   |   /   |   \   |
-            //               | CTRL | ALT  | SHIFT| LOWER| RET  |  | SPACE | RAISE| GUI | ALTG  | CTRL |
+            //               | CTRL | ALT  |SHIFT| LOWER| RET  |  | SPACE | RAISE| GUI | ALTG  | CTRL |
 
             bindings = <
 &kp ESC    &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                            &kp N6   &kp N7     &kp N8     &kp N9    &kp N0    &kp EQUAL
@@ -36,14 +36,14 @@
             // | RAISE |   1 |   2 |   3  |   4  |   5  |                   |   6  |   7   |   8   |   9  |    0  |  F12  |
             // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
             // |       |  =  |  -  |  +   |  {   |  }   |        |  |       |  [   |  ]    |  ;    |  :   |   \   | LSHFT |
-            //               |     |      |      |      |        |  | BKSP  |      |       |  UP   | DOWN |
+            //               |CTRL | ALT  |SHIFT |      |        |  | BKSP  |      |       |  UP   | DOWN |
 
             bindings = <
 &kp GRAVE  &kp F1     &kp F2     &kp F3       &kp F4    &kp F5                        &kp F6     &kp F7    &kp F8           &kp F9     &kp F10   &kp F11
 &mo 2      &kp N1     &kp N2     &kp N3       &kp N4    &kp N5                        &kp N6     &kp N7    &kp N8           &kp N9     &kp N0    &kp F12
 &trans     &kp EXCL   &kp AT     &kp HASH     &kp DLLR  &kp PRCNT                     &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &kp PIPE
 &trans     &kp EQUAL  &kp MINUS  &kp KP_PLUS  &kp LBRC  &kp RBRC   &trans    &trans   &kp LBKT   &kp RBKT  &kp SEMI         &kp COLON  &kp BSLH  &kp RSHFT
-                      &trans     &trans       &trans    &trans     &trans    &kp BSPC &tog 2     &trans    &kp UP           &kp DOWN
+                      &kp LCTRL  &kp LALT     &kp LSHFT &trans     &trans    &kp BSPC &tog 2     &trans    &kp UP           &kp DOWN
 &kp Q
             >;
 
@@ -57,14 +57,14 @@
             // |      |MV_L_F|MV_U_F|MV_UP  |MV_U_F |      |                | MENU  |      | SCR_U |       |  PSCR |       |
             // |CAPS_W|MV_L_F|MV_L  |MV_UP  |MV_R   |MV_R_F|                |       | LCLK | RCLK  | MCLK  |       |       |
             // |CAPS  |      |MV_D_F|MV_DN  |MV_D_F |      |      |  |      |       | SCR_L| SCR_D | SCR_R |       |       |
-            //               |      |       |       |      |      |  |      |       |      |       |       |
+            //               |CTRL  | ALT   |SHIFT  |      |      |  |      |       |      |       |       |
 
             bindings = <
 &trans         &bt BT_SEL 0         &bt BT_SEL 1         &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_SEL 4                            &bt BT_CLR     &trans               &trans              &trans              &trans        &kp DEL
 &trans         &mmv MOVE_X(-1200)   &mmv MOVE_Y(-1200)   &mmv MOVE_Y(-600)  &mmv MOVE_Y(-1200)  &trans                                  &kp K_CMENU    &trans               &msc MOVE_Y(-20)    &trans              &kp PSCRN     &trans
 &caps_word     &mmv MOVE_X(-1200)   &mmv MOVE_X(-600)    &mmv MOVE_Y(-600)  &mmv MOVE_X(600)    &mmv MOVE_X(600)                        &trans         &mkp LCLK            &mkp RCLK           &mkp MCLK           &trans        &trans
 &kp CLCK       &trans               &mmv MOVE_Y(1200)    &mmv MOVE_Y(600)   &mmv MOVE_Y(1200)   &trans              &trans    &trans    &trans         &msc MOVE_X(-20)     &msc MOVE_Y(20)     &msc MOVE_X(20)     &trans        &trans
-                                    &trans               &trans             &trans              &tog 1              &trans    &trans    &trans         &trans               &trans              &trans
+                                    &kp LCTRL            &kp LALT           &kp LSHFT           &tog 1              &trans    &trans    &trans         &trans               &trans              &trans
 &kp Q
             >;
 
