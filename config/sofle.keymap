@@ -65,7 +65,7 @@
 &caps_word     &mmv MOVE_X(-1200)   &mmv MOVE_X(-600)    &mmv MOVE_Y(-600)  &mmv MOVE_X(600)    &mmv MOVE_X(600)                        &trans         &mkp LCLK            &mkp RCLK           &mkp MCLK           &trans        &trans
 &kp CLCK       &trans               &mmv MOVE_Y(1200)    &mmv MOVE_Y(600)   &mmv MOVE_Y(1200)   &trans              &trans    &trans    &trans         &msc MOVE_X(-20)     &msc MOVE_Y(20)     &msc MOVE_X(20)     &trans        &trans
                                     &trans               &trans             &trans              &tog 1              &trans    &trans    &trans         &trans               &trans              &trans
-&kp Q=
+&kp Q
             >;
 
             sensor-bindings = <&inc_dec_kp END HOME &inc_dec_kp PG_UP PG_DN>;
