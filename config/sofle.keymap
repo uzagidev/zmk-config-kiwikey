@@ -30,6 +30,24 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <36 37 38 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
         };
+
+        my_layer_tap: my_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Change layer by tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred"; // Hoặc "hold-preferred" tùy theo cảm nhận
+            bindings = <&mo 1>, <&kp UNDEFINED>; // UNDEFINED sẽ được thay thế bằng macro
+        };
+    };
+
+    macros {
+        toggle_layer_macro: toggle_layer_macro {
+            compatible = "zmk,behavior-macro";
+            label = "TOGGLE_LAYER_MACRO";
+            #binding-cells = <0>;
+            bindings = <&tog 1>;
+        };
     };
 
     keymap {
