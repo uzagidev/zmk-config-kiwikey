@@ -90,7 +90,7 @@
             bindings = <
 &kp ESCAPE   &bt BT_SEL 0        &bt BT_SEL 1        &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_SEL 4                              &bt BT_CLR   &trans            &trans            &kp K_SLEEP      &trans     &kp DEL
 &kp LS(TAB)  &mmv MOVE_X(-1200)  &mmv MOVE_Y(-1200)  &mmv MOVE_Y(-600)  &mmv MOVE_Y(-1200)  &kp HOME                                  &kp K_CMENU  &trans            &msc MOVE_Y(-20)  &trans           &kp PSCRN  &trans
-&caps_word   &mmv MOVE_X(-1200)  &mmv MOVE_X(-600)   &mmv MOVE_Y(-600)  &mmv MOVE_X(600)    &mmv MOVE_X(600)                          &trans       &mkp LCLK         &mkp RCLK         &mkp MCLK        &kp UP     &kp DOWN
+&caps_word   &mmv MOVE_X(-1200)  &mmv MOVE_X(-600)   &mmv MOVE_Y(600)   &mmv MOVE_X(600)    &mmv MOVE_X(600)                          &trans       &mkp LCLK         &mkp RCLK         &mkp MCLK        &kp UP     &kp DOWN
 &kp K_REDO   &kp K_UNDO          &mmv MOVE_Y(1200)   &kp K_COPY         &kp K_PASTE         &kp END           &trans         &trans   &trans       &msc MOVE_X(-20)  &msc MOVE_Y(20)   &msc MOVE_X(20)  &kp LEFT   &kp RIGHT
                                  &kp LCTRL           &kp LALT           &kp LSHFT           &to 1             &kp LS(TAB)    &kp TAB  &to 0        &kp RGUI          &kp RCTRL         &kp RSHFT
             >;
