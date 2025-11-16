@@ -5,9 +5,9 @@
 
 / {
     behaviors {
-        HMR: HMR {
+        hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
-            label = "hrm";
+            label = "Home row mod right";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -18,9 +18,9 @@
             hold-trigger-on-release;
         };
 
-        HML: HML {
+        hml: hml {
             compatible = "zmk,behavior-hold-tap";
-            label = "hml";
+            label = "Home row mod left";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
