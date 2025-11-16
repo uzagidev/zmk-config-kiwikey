@@ -51,8 +51,7 @@
         mo_l1_notify: mo_l1_notify {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp NOTI_LOWER>     // Tap F13 (Red)
+            bindings = <&macro_tap &kp NOTI_LOWER>     // Tap F13 (Red)
                 , <&macro_press &mo 1>          // Press and hold layer 1
                 , <&macro_pause_for_release>      // Wait for key release
                 , <&macro_release &mo 1>        // Release layer 1
@@ -71,8 +70,7 @@
         mo_l2_notify: mo_l2_notify {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp NOTI_RAISE>     // Tap F14 (Blue)
+            bindings = <&macro_tap &kp NOTI_RAISE>     // Tap F14 (Blue)
                 , <&macro_press &mo 2>          // Press and hold layer 2
                 , <&macro_pause_for_release>
                 , <&macro_release &mo 2>
