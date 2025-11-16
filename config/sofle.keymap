@@ -132,7 +132,7 @@
 &kp TAB            &kp N1          &kp N2     &kp N3       &kp N4     &kp N5                               &kp N6     &kp N7           &kp N8           &kp N9     &kp N0    &kp MINUS
 &kp EQUAL          &kp EXCL        &kp AT     &kp HASH     &kp DLLR   &kp PRCNT                            &kp CARET  &kp AMPS         &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &kp NUBS
 &kp LC(BACKSPACE)  &kp LC(DELETE)  &kp MINUS  &kp KP_PLUS  &kp LBRC   &kp RBRC             &trans          &trans   &kp LBKT           &kp RBKT  &kp SEMI         &kp COLON  &kp FSLH  &kp GRAVE
-                                   &kp LCTRL  &kp LALT     &kp LSHFT  &to_base_notify      &kp BACKSPACE   &kp TAB  &to_l2_notify      &kp RGUI  &kp RCTRL        &kp RSHFT
+                                  &kp LEFT_ALT     &kp LEFT_CONTROL     &kp LSHFT  &to_base_notify      &kp BACKSPACE   &kp TAB  &to_l2_notify      &kp RIGHT_SHIFT     &kp RCTRL             &kp RIGHT_GUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -153,7 +153,7 @@
 &kp LS(TAB)  &mmv MOVE_X(-1200)  &mmv MOVE_Y(-1200)  &mmv MOVE_Y(-600)  &mmv MOVE_Y(-1200)  &kp HOME                                  &kp K_CMENU  &trans            &msc MOVE_Y(-20)  &trans           &kp PSCRN  &trans
 &caps_word   &mmv MOVE_X(-1200)  &mmv MOVE_X(-600)   &mmv MOVE_Y(600)   &mmv MOVE_X(600)    &mmv MOVE_X(600)                          &trans       &mkp LCLK         &mkp RCLK         &mkp MCLK        &kp UP     &kp DOWN
 &kp K_REDO   &kp K_UNDO          &mmv MOVE_Y(1200)   &kp K_COPY         &kp K_PASTE         &kp END           &trans         &trans   &trans       &msc MOVE_X(-20)  &msc MOVE_Y(20)   &msc MOVE_X(20)  &kp LEFT   &kp RIGHT
-                                 &kp LCTRL           &kp LALT           &kp LSHFT           &to_l1_notify             &kp LS(TAB)    &kp TAB  &to_base_notify        &kp RGUI          &kp RCTRL         &kp RSHFT
+                                 &kp LEFT_ALT     &kp LEFT_CONTROL     &kp LSHFT           &to_l1_notify             &kp LS(TAB)    &kp TAB  &to_base_notify        &kp RIGHT_SHIFT     &kp RCTRL             &kp RIGHT_GUI
             >;
 
             sensor-bindings = <&inc_dec_kp END HOME &inc_dec_kp PG_UP PG_DN>;
