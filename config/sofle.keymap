@@ -44,67 +44,53 @@
             bindings = <&mo>, <&to>;
         };
 
-        // --- Notification Macros ---
-        // These macros combine the layer change with sending the F-key.
-
-        // Action: Momentary Layer 1 (LOWER)
         mo_l1_notify: mo_l1_notify {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp NOTI_LOWER>, <&macro_press &mo 1>, <&macro_pause_for_release>, <&macro_release &mo 1>, <&macro_tap &kp NOTI_BASE>;
         };
 
-        // Action: Toggle Layer 1 (LOWER)
         to_l1_notify: to_l1_notify {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp NOTI_LOWER>, <&to 1>; // Tap F13 (Red)
+            bindings = <&macro_tap &kp NOTI_LOWER>, <&to 1>;
         };
 
-        // Action: Momentary Layer 2 (RAISE)
         mo_l2_notify: mo_l2_notify {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp NOTI_RAISE>, <&macro_press &mo 2>, <&macro_pause_for_release>, <&macro_release &mo 2>, <&macro_tap &kp NOTI_BASE>;
         };
 
-        // Action: Toggle Layer 2 (RAISE)
         to_l2_notify: to_l2_notify {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp NOTI_RAISE>, <&to 2>; // Tap F14 (Blue)
+            bindings = <&macro_tap &kp NOTI_RAISE>, <&to 2>;
         };
-        
-        // Action: Go to Layer 0 (Base)
+
         to_base_notify: to_base_notify {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp NOTI_BASE>, <&to 0>; // Tap F15 (Green)
+            bindings = <&macro_tap &kp NOTI_BASE>, <&to 0>;
         };
 
-        // --- 2. New "General" Hold-Tap Behaviors ---
-        // These are what you will use in your keymap. They replace 'my_layer_tap'.
-
-        // Hold-Tap for LOWER
         ht_lower: ht_lower {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_LOWER_NOTIFY";
             #binding-cells = <0>;
-            tapping-term-ms = <200>; // From your my_layer_tap [cite: 8]
-            flavor = "tap-preferred"; // From your my_layer_tap [cite: 8]
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
             bindings = <&mo_l1_notify>, <&to_l1_notify>;
         };
 
-        // Hold-Tap for RAISE
         ht_raise: ht_raise {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_RAISE_NOTIFY";
             #binding-cells = <0>;
-            tapping-term-ms = <200>; // From your my_layer_tap [cite: 8]
-            flavor = "tap-preferred"; // From your my_layer_tap [cite: 8]
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
             bindings = <&mo_l2_notify>, <&to_l2_notify>;
         };
-        / --- End Notification Macros ---
     };
 
     keymap {
