@@ -3,9 +3,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define NOTI_LOWER    K_F13 // Lower (Layer 1)
-#define NOTI_RAISE    K_F14 // Raise (Layer 2)
-#define NOTI_BASE     K_F15 // Base (Layer 0)
+#define NOTI_LOWER    F13  // Lower (Layer 1)
+#define NOTI_RAISE    F14  // Raise (Layer 2)
+#define NOTI_BASE     F15  // Base (Layer 0)
 
 / {
     behaviors {
