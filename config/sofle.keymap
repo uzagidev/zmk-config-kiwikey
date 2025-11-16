@@ -47,31 +47,49 @@
         mo_l1_notify: mo_l1_notify {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp NOTI_LOWER>, <&macro_press &mo 1>, <&macro_pause_for_release>, <&macro_release &mo 1>, <&macro_tap &kp NOTI_BASE>;
+            bindings =
+                <&macro_tap>,
+                <&kp NOTI_LOWER>,
+                <&macro_press>,
+                <&mo 1>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 1>,
+                <&macro_tap>,
+                <&kp NOTI_BASE>;
         };
 
         to_l1_notify: to_l1_notify {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp NOTI_LOWER>, <&to 1>;
+            bindings = <&macro_tap>, <&kp NOTI_LOWER &to 1>;
         };
 
         mo_l2_notify: mo_l2_notify {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp NOTI_RAISE>, <&macro_press &mo 2>, <&macro_pause_for_release>, <&macro_release &mo 2>, <&macro_tap &kp NOTI_BASE>;
+            bindings =
+                <&macro_tap>,
+                <&kp NOTI_RAISE>,
+                <&macro_press>,
+                <&mo 2>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 2>,
+                <&macro_tap>,
+                <&kp NOTI_BASE>;
         };
 
         to_l2_notify: to_l2_notify {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp NOTI_RAISE>, <&to 2>;
+            bindings = <&macro_tap>, <&kp NOTI_RAISE &to 2>;
         };
 
         to_base_notify: to_base_notify {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp NOTI_BASE>, <&to 0>;
+            bindings = <&macro_tap>, <&kp NOTI_BASE &to 0>;
         };
 
         ht_lower: ht_lower {
@@ -93,6 +111,9 @@
         };
     };
 
+    macros {
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -107,11 +128,11 @@
             //               | CTRL | ALT  |SHIFT| LOWER| RET   |  | SPACE | RAISE| GUI | CTRL  |SHIFT |
 
             bindings = <
-&kp ESC        &kp N1  &kp N2           &kp N3               &kp N4             &kp N5                                       &kp N6             &kp N7              &kp N8                &kp N9            &kp N0    &kp EQUAL
-&kp TAB        &kp Q   &kp W            &kp E                &kp R              &kp T                                        &kp Y              &kp U               &kp I                 &kp O             &kp P     &kp LBKT
-&kp CAPS       &kp A   &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G                                        &kp H              &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L  &kp SEMI  &kp RBKT
-&kp BACKSPACE  &kp Z   &kp X            &kp C                &kp V              &kp B              &kp C_MUTE    &kp C_MUTE  &kp N              &kp M               &kp COMMA             &kp DOT           &kp FSLH  &kp SQT
-                       &kp LEFT_ALT     &kp LEFT_CONTROL     &kp LSHFT          &ht_lower 0 0          &kp RET       &kp SPACE   &ht_raise 0 0          &kp RIGHT_SHIFT     &kp RCTRL             &kp RIGHT_GUI
+&kp ESC        &kp N1  &kp N2           &kp N3               &kp N4             &kp N5                                   &kp N6         &kp N7              &kp N8                &kp N9            &kp N0    &kp EQUAL
+&kp TAB        &kp Q   &kp W            &kp E                &kp R              &kp T                                    &kp Y          &kp U               &kp I                 &kp O             &kp P     &kp LBKT
+&kp CAPS       &kp A   &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G                                    &kp H          &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L  &kp SEMI  &kp RBKT
+&kp BACKSPACE  &kp Z   &kp X            &kp C                &kp V              &kp B          &kp C_MUTE    &kp C_MUTE  &kp N          &kp M               &kp COMMA             &kp DOT           &kp FSLH  &kp SQT
+                       &kp LEFT_ALT     &kp LEFT_CONTROL     &kp LSHFT          &ht_lower 0 0  &kp RET       &kp SPACE   &ht_raise 0 0  &kp RIGHT_SHIFT     &kp RCTRL             &kp RIGHT_GUI
             >;
 
             sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB)) &inc_dec_kp LA(TAB) LA(LS(TAB))>;
@@ -128,11 +149,11 @@
             //               |CTRL | ALT  |SHIFT | BASE |        |  | BKSP  |RAISE |  GUI  | CTRL  |SHIFT |
 
             bindings = <
-&kp ESC            &kp F1          &kp F2     &kp F3       &kp F4     &kp F5                               &kp F6     &kp F7           &kp F8           &kp F9     &kp F10   &kp F11
-&kp TAB            &kp N1          &kp N2     &kp N3       &kp N4     &kp N5                               &kp N6     &kp N7           &kp N8           &kp N9     &kp N0    &kp MINUS
-&kp EQUAL          &kp EXCL        &kp AT     &kp HASH     &kp DLLR   &kp PRCNT                            &kp CARET  &kp AMPS         &kp KP_MULTIPLY  &kp LPAR   &kp RPAR  &kp NUBS
-&kp LC(BACKSPACE)  &kp LC(DELETE)  &kp MINUS  &kp KP_PLUS  &kp LBRC   &kp RBRC             &trans          &trans   &kp LBKT           &kp RBKT  &kp SEMI         &kp COLON  &kp FSLH  &kp GRAVE
-                                  &kp LEFT_ALT     &kp LEFT_CONTROL     &kp LSHFT  &to_base_notify      &kp BACKSPACE   &kp TAB  &to_l2_notify      &kp RIGHT_SHIFT     &kp RCTRL             &kp RIGHT_GUI
+&kp ESC            &kp F1          &kp F2        &kp F3            &kp F4     &kp F5                                     &kp F6         &kp F7           &kp F8           &kp F9         &kp F10   &kp F11
+&kp TAB            &kp N1          &kp N2        &kp N3            &kp N4     &kp N5                                     &kp N6         &kp N7           &kp N8           &kp N9         &kp N0    &kp MINUS
+&kp EQUAL          &kp EXCL        &kp AT        &kp HASH          &kp DLLR   &kp PRCNT                                  &kp CARET      &kp AMPS         &kp KP_MULTIPLY  &kp LPAR       &kp RPAR  &kp NUBS
+&kp LC(BACKSPACE)  &kp LC(DELETE)  &kp MINUS     &kp KP_PLUS       &kp LBRC   &kp RBRC         &trans           &trans   &kp LBKT       &kp RBKT         &kp SEMI         &kp COLON      &kp FSLH  &kp GRAVE
+                                   &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHFT  &to_base_notify  &kp BACKSPACE    &kp TAB  &to_l2_notify  &kp RIGHT_SHIFT  &kp RCTRL        &kp RIGHT_GUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -149,11 +170,11 @@
             //               |CTRL  | ALT   |SHIFT  |      |      |  |      | BASE  | GUI  | CTRL  | SHIFT |
 
             bindings = <
-&kp ESCAPE   &bt BT_SEL 0        &bt BT_SEL 1        &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_SEL 4                              &bt BT_CLR   &trans            &trans            &kp K_SLEEP      &trans     &kp DEL
-&kp LS(TAB)  &mmv MOVE_X(-1200)  &mmv MOVE_Y(-1200)  &mmv MOVE_Y(-600)  &mmv MOVE_Y(-1200)  &kp HOME                                  &kp K_CMENU  &trans            &msc MOVE_Y(-20)  &trans           &kp PSCRN  &trans
-&caps_word   &mmv MOVE_X(-1200)  &mmv MOVE_X(-600)   &mmv MOVE_Y(600)   &mmv MOVE_X(600)    &mmv MOVE_X(600)                          &trans       &mkp LCLK         &mkp RCLK         &mkp MCLK        &kp UP     &kp DOWN
-&kp K_REDO   &kp K_UNDO          &mmv MOVE_Y(1200)   &kp K_COPY         &kp K_PASTE         &kp END           &trans         &trans   &trans       &msc MOVE_X(-20)  &msc MOVE_Y(20)   &msc MOVE_X(20)  &kp LEFT   &kp RIGHT
-                                 &kp LEFT_ALT     &kp LEFT_CONTROL     &kp LSHFT           &to_l1_notify             &kp LS(TAB)    &kp TAB  &to_base_notify        &kp RIGHT_SHIFT     &kp RCTRL             &kp RIGHT_GUI
+&kp ESCAPE   &bt BT_SEL 0        &bt BT_SEL 1        &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_SEL 4                              &bt BT_CLR       &trans            &trans            &kp K_SLEEP      &trans     &kp DEL
+&kp LS(TAB)  &mmv MOVE_X(-1200)  &mmv MOVE_Y(-1200)  &mmv MOVE_Y(-600)  &mmv MOVE_Y(-1200)  &kp HOME                                  &kp K_CMENU      &trans            &msc MOVE_Y(-20)  &trans           &kp PSCRN  &trans
+&caps_word   &mmv MOVE_X(-600)   &mmv MOVE_X(-600)   &mmv MOVE_Y(600)   &mmv MOVE_X(600)    &mmv MOVE_X(600)                          &trans           &mkp LCLK         &mkp RCLK         &mkp MCLK        &kp UP     &kp DOWN
+&kp K_REDO   &kp K_UNDO          &mmv MOVE_Y(1200)   &kp K_COPY         &kp K_PASTE         &kp END           &trans         &trans   &trans           &msc MOVE_X(-20)  &msc MOVE_Y(20)   &msc MOVE_X(20)  &kp LEFT   &kp RIGHT
+                                 &kp LEFT_ALT        &kp LEFT_CONTROL   &kp LSHFT           &to_l1_notify     &kp LS(TAB)    &kp TAB  &to_base_notify  &kp RIGHT_SHIFT   &kp RCTRL         &kp RIGHT_GUI
             >;
 
             sensor-bindings = <&inc_dec_kp END HOME &inc_dec_kp PG_UP PG_DN>;
