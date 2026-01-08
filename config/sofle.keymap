@@ -49,7 +49,7 @@
             if-layers = <2 3>;
             then-layer = <5>;
         };
-        
+
         slow_mouse {
             if-layers = <2 4>;
             then-layer = <6>;
@@ -113,9 +113,9 @@
 
             bindings = <
 &kp ESCAPE  &bt BT_SEL 0        &bt BT_SEL 1        &bt BT_SEL 2        &bt BT_SEL 3        &bt BT_SEL 4                             &bt BT_CLR   &trans            &kp LC(LEFT_SHIFT)  &kp K_SLEEP      &trans     &kp DEL
-&kp TAB     &mmv MOVE_X(-1200)  &mmv MOVE_Y(-1200)  &mmv MOVE_Y(-1200)  &mmv MOVE_Y(-1200)  &kp HOME                                 &kp K_CMENU  &trans            &msc MOVE_Y(-20)    &trans           &kp PSCRN  &trans
-&caps_word  &mmv MOVE_X(-1200)  &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)   &mmv MOVE_X(1200)                        &trans       &mkp LCLK         &mkp RCLK           &mkp MCLK        &kp UP     &kp DOWN
-&trans      &trans              &mmv MOVE_Y(1200)   &kp LC(C)           &kp LC(V)           &kp END            &trans     &trans     &trans       &msc MOVE_X(-20)  &msc MOVE_Y(20)     &msc MOVE_X(20)  &kp LEFT   &kp RIGHT
+&kp TAB     &mmv MOVE_X(-1200)  &mmv MOVE_Y(-1200)  &mmv MOVE_Y(-1200)  &mmv MOVE_Y(-1200)  &kp HOME                                 &kp K_CMENU  &trans            &msc MOVE_Y(-20)    &trans           &kp PSCRN  &kp UP_ARROW
+&caps_word  &mmv MOVE_X(-1200)  &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)   &mmv MOVE_X(1200)                        &trans       &mkp LCLK         &mkp RCLK           &trans           &kp UP     &kp DOWN
+&mo 3       &mo 4               &mmv MOVE_Y(1200)   &kp LC(C)           &kp LC(V)           &kp END            &trans     &trans     &trans       &msc MOVE_X(-20)  &msc MOVE_Y(20)     &msc MOVE_X(20)  &kp LEFT   &kp RIGHT
                                 &kp LEFT_ALT        &kp LEFT_CONTROL    &kp LSHFT           &to 1              &kp TAB    &kp SPACE  &to 0        &kp RIGHT_SHIFT   &kp RCTRL           &kp RIGHT_GUI
             >;
 
@@ -176,13 +176,12 @@
     };
 };
 
-
 &mmv_input_listener {
     fast_mode {
         layers = <5>;
         input-processors = <&zip_xy_scaler 2 1>;
     };
-    
+
     precision_mode {
         layers = <6>;
         input-processors = <&zip_xy_scaler 1 3>;
