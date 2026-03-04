@@ -92,7 +92,7 @@
 
             bindings = <
 &kp ESC        &kp F1      &kp F2        &kp F3            &kp F4     &kp F5                             &kp F6     &kp F7           &kp F8           &kp F9         &kp F10   &kp F11
-&kp TAB        &kp N1      &kp N2        &kp N3            &kp N4     &kp N5                             &kp N6     &kp N7           &kp N8           &kp N9         &kp N0    &kp MINUS
+&kp TAB        &kp Q       &kp N2        &kp N3            &kp N4     &kp N5                             &kp N6     &kp N7           &kp N8           &kp N9         &kp N0    &kp MINUS
 &kp EQUAL      &kp EXCL    &kp AT        &kp HASH          &kp DLLR   &kp PRCNT                          &kp CARET  &kp AMPS         &kp KP_MULTIPLY  &kp LPAR       &kp RPAR  &kp NUBS
 &kp BACKSPACE  &kp DELETE  &kp MINUS     &kp KP_PLUS       &kp LBRC   &kp RBRC   &trans       &trans     &kp LBKT   &kp RBKT         &kp SEMI         &kp COLON      &kp FSLH  &kp GRAVE
                            &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHFT  &to 0      &kp ENTER    &kp SPACE  &to 2      &kp RIGHT_SHIFT  &kp RCTRL        &kp RIGHT_GUI
@@ -113,7 +113,7 @@
 
             bindings = <
 &kp ESCAPE     &bt BT_SEL 0        &bt BT_SEL 1        &bt BT_SEL 2        &bt BT_SEL 3        &bt BT_SEL 4                               &trans       &trans            &kp LC(LEFT_SHIFT)  &kp K_SLEEP      &trans     &kp DEL
-&kp TAB        &mmv MOVE_X(-1200)  &mmv MOVE_Y(-1200)  &mmv MOVE_Y(-1200)  &mmv MOVE_Y(-1200)  &kp HOME                                   &kp K_CMENU  &mo 3             &msc MOVE_Y(-20)    &mo 4            &kp PSCRN  &kp UP_ARROW
+&kp TAB        &kp Q               &mmv MOVE_Y(-1200)  &mmv MOVE_Y(-1200)  &mmv MOVE_Y(-1200)  &kp HOME                                   &kp K_CMENU  &mo 3             &msc MOVE_Y(-20)    &mo 4            &kp PSCRN  &kp UP_ARROW
 &caps_word     &mmv MOVE_X(-1200)  &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)   &mmv MOVE_X(1200)                          &trans       &mkp LCLK         &trans              &mkp RCLK        &kp UP     &kp DOWN
 &kp BACKSPACE  &kp DELETE          &mmv MOVE_Y(1200)   &kp LC(C)           &kp LC(V)           &kp END            &trans       &trans     &trans       &msc MOVE_X(-20)  &msc MOVE_Y(20)     &msc MOVE_X(20)  &kp LEFT   &kp RIGHT
                                    &kp LEFT_ALT        &kp LEFT_CONTROL    &kp LSHFT           &to 1              &kp ENTER    &kp SPACE  &to 0        &kp RIGHT_SHIFT   &kp RCTRL           &kp RIGHT_GUI
