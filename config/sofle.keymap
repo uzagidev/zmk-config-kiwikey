@@ -112,7 +112,7 @@
             //               |CTRL  | ALT   |SHIFT  |      |      |  |      | BASE  | GUI  | CTRL  | SHIFT |
 
             bindings = <
-&kp ESCAPE     &trans              &trans              &trans              &trans              &trans                                     &trans       &trans            &kp LC(LEFT_SHIFT)  &kp K_SLEEP      &trans     &kp DEL
+&kp ESCAPE     &none               &none               &none               &none               &none                                      &trans       &trans            &kp LC(LEFT_SHIFT)  &kp K_SLEEP      &trans     &kp DEL
 &kp TAB        &kp Q               &kp W               &mmv MOVE_Y(-1200)  &mmv MOVE_Y(-1200)  &kp HOME                                   &kp K_CMENU  &mo 3             &msc MOVE_Y(-20)    &mo 4            &kp PSCRN  &kp UP_ARROW
 &caps_word     &mmv MOVE_X(-1200)  &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)   &mmv MOVE_X(1200)                          &none        &mkp LCLK         &none               &mkp RCLK        &kp UP     &kp DOWN
 &kp BACKSPACE  &kp LC(Z)           &kp LC(X)           &kp LC(C)           &kp LC(V)           &kp END            &trans       &trans     &none        &msc MOVE_X(-20)  &msc MOVE_Y(20)     &msc MOVE_X(20)  &kp LEFT   &kp RIGHT
