@@ -54,6 +54,11 @@
             if-layers = <2 4>;
             then-layer = <6>;
         };
+
+        bt_control {
+            if-layers = <1 7>;
+            then-layer = <8>;
+        };
     };
 
     keymap {
@@ -91,11 +96,11 @@
             //               |CTRL | ALT  |SHIFT | BASE |        |  | BKSP  |RAISE |  GUI  | CTRL  |SHIFT |
 
             bindings = <
-&kp ESC        &kp F1        &kp F2        &kp F3            &kp F4        &kp F5                                &kp F6     &kp F7           &kp F8           &kp F9         &kp F10   &kp F11
-&kp TAB        &kp Q         &kp N2        &kp N3            &kp N4        &kp N5                                &kp N6     &kp N7           &kp N8           &kp N9         &kp N0    &kp MINUS
-&kp EQUAL      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4                          &kp CARET  &kp AMPS         &kp KP_MULTIPLY  &kp LPAR       &kp RPAR  &kp NUBS
-&kp BACKSPACE  &kp DELETE    &kp MINUS     &kp KP_PLUS       &kp LBRC      &kp RBRC      &trans       &trans     &kp LBKT   &kp RBKT         &kp SEMI         &kp COLON      &kp FSLH  &kp GRAVE
-                             &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHFT     &to 0         &kp ENTER    &kp SPACE  &to 2      &kp RIGHT_SHIFT  &kp RCTRL        &kp RIGHT_GUI
+&kp ESC        &kp F1      &kp F2        &kp F3            &kp F4     &kp F5                          &kp F6     &kp F7           &kp F8           &kp F9         &kp F10   &kp F11
+&kp TAB        &kp Q       &kp N2        &kp N3            &kp N4     &kp N5                          &kp N6     &kp N7           &kp N8           &kp N9         &kp N0    &kp MINUS
+&kp EQUAL      &none       &none         &none             &none      &none                           &kp CARET  &kp AMPS         &kp KP_MULTIPLY  &kp LPAR       &kp RPAR  &kp NUBS
+&kp BACKSPACE  &kp DELETE  &kp MINUS     &kp KP_PLUS       &none      &to 7   &trans       &trans     &kp LBKT   &kp RBKT         &kp SEMI         &kp COLON      &kp FSLH  &kp GRAVE
+                           &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHFT  &to 0   &kp ENTER    &kp SPACE  &to 2      &kp RIGHT_SHIFT  &kp RCTRL        &kp RIGHT_GUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -172,6 +177,30 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
+        };
+
+        bt_modifier {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "BT_MOD";
+        };
+
+        bt_layer {
+            bindings = <
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                      &trans        &trans        &trans        &trans        &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "BT";
         };
     };
 };
