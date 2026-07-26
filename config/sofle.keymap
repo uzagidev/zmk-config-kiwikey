@@ -96,11 +96,11 @@
             //               |CTRL | ALT  |SHIFT | BASE |        |  | BKSP  |RAISE |  GUI  | CTRL  |SHIFT |
 
             bindings = <
-&kp ESC        &kp F1      &kp F2        &kp F3            &kp F4     &kp F5                          &kp F6     &kp F7           &kp F8           &kp F9         &kp F10   &kp F11
-&kp TAB        &kp Q       &kp N2        &kp N3            &kp N4     &kp N5                          &kp N6     &kp N7           &kp N8           &kp N9         &kp N0    &kp MINUS
-&kp EQUAL      &none       &none         &none             &none      &none                           &kp CARET  &kp AMPS         &kp KP_MULTIPLY  &kp LPAR       &kp RPAR  &kp NUBS
-&kp BACKSPACE  &kp DELETE  &kp MINUS     &kp KP_PLUS       &none      &to 7   &trans       &trans     &kp LBKT   &kp RBKT         &kp SEMI         &kp COLON      &kp FSLH  &kp GRAVE
-                           &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHFT  &to 0   &kp ENTER    &kp SPACE  &to 2      &kp RIGHT_SHIFT  &kp RCTRL        &kp RIGHT_GUI
+&kp ESC        &kp F1        &kp F2        &kp F3            &kp F4        &kp F5                                &kp F6     &kp F7           &kp F8           &kp F9         &kp F10   &kp F11
+&kp TAB        &kp NUMBER_1  &kp N2        &kp N3            &kp N4        &kp N5                                &kp N6     &kp N7           &kp N8           &kp N9         &kp N0    &kp MINUS
+&kp EQUAL      &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8      &kp NUMBER_9  &kp NUMBER_0                          &kp CARET  &kp AMPS         &kp KP_MULTIPLY  &kp LPAR       &kp RPAR  &kp NUBS
+&kp BACKSPACE  &none         &none         &none             &none         &to 7         &trans       &trans     &kp LBKT   &kp RBKT         &kp SEMI         &kp COLON      &kp FSLH  &kp GRAVE
+                             &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LSHFT     &to 0         &kp ENTER    &kp SPACE  &to 2      &kp RIGHT_SHIFT  &kp RCTRL        &kp RIGHT_GUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -117,14 +117,16 @@
             //               |CTRL  | ALT   |SHIFT  |      |      |  |      | BASE  | GUI  | CTRL  | SHIFT |
 
             bindings = <
-&kp ESCAPE     &kp LC(A)  &kp LC(S)           &kp LC(D)           &kp LC(F)           &kp LC(G)                                  &kp LC(H)  &kp LG(V)         &none             &none            &none      &kp DEL
-&kp TAB        &kp Q      &kp W               &mmv MOVE_Y(-1200)  &mmv MOVE_Y(-1200)  &kp HOME                                   &kp RC(Y)  &mo 3             &msc MOVE_Y(-20)  &mo 4            &kp PSCRN  &kp UP_ARROW
-&caps_word     &none      &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)   &mmv MOVE_X(1200)                          &none      &mkp LCLK         &none             &mkp RCLK        &kp UP     &kp DOWN
-&kp BACKSPACE  &kp LC(Z)  &kp LC(X)           &kp LC(C)           &kp LC(V)           &kp END            &trans       &trans     &none      &msc MOVE_X(-20)  &msc MOVE_Y(20)   &msc MOVE_X(20)  &kp LEFT   &kp RIGHT
+&kp ESCAPE     &kp LC(A)  &kp LC(S)           &kp LC(D)           &kp LC(F)           &kp LC(G)                                  &kp LC(H)  &kp LG(V)         &none             &none            &kp PRINTSCREEN  &kp DEL
+&kp TAB        &kp Q      &kp W               &mmv MOVE_Y(-1200)  &mmv MOVE_Y(-1200)  &kp HOME                                   &kp RC(Y)  &mo 3             &msc MOVE_Y(-20)  &mo 4            &none            &kp UP_ARROW
+&caps_word     &none      &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)   &mmv MOVE_X(1200)   &mmv MOVE_X(1200)                          &none      &mkp LCLK         &none             &mkp RCLK        &kp UP           &kp DOWN
+&kp BACKSPACE  &kp LC(Z)  &kp LC(X)           &kp LC(C)           &kp LC(V)           &kp END            &trans       &trans     &none      &msc MOVE_X(-20)  &msc MOVE_Y(20)   &msc MOVE_X(20)  &kp LEFT         &kp RIGHT
                           &kp LEFT_ALT        &kp LEFT_CONTROL    &kp LSHFT           &to 1              &kp ENTER    &kp SPACE  &to 0      &kp RIGHT_SHIFT   &kp RCTRL         &kp RIGHT_GUI
             >;
 
-            sensor-bindings = <&inc_dec_kp END HOME &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp END HOME>,
+                <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
         fast_modifier {
